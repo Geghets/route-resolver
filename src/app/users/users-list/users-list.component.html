@@ -1,0 +1,11 @@
+<div *ngIf="users">
+  <ng-container *ngFor="let user of users">
+    <div class="user">
+      <div class="content">
+        <p>{{user.name}}</p>
+        <h2>{{user.email}}</h2>
+      </div>
+      <button [routerLink]="['user', user.id]">Details</button>
+    </div>
+  </ng-container>
+</div>
